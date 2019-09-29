@@ -45,7 +45,7 @@ public class TokenAuthenticatorApplication implements CommandLineRunner {
 		SpringApplication.run(TokenAuthenticatorApplication.class, args);
 	}
 	
-	@RequestMapping(path="/invalidate",method=RequestMethod.GET)
+	@RequestMapping(path="/invalidatealltoken",method=RequestMethod.GET)
 	public String invalidateAllToken(){
 		List<String> allTokens=userCrudRepository.getAllTokens();
 		List<InvalidTokens> expiredTokens=new ArrayList<>();
