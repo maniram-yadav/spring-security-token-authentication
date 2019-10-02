@@ -1,7 +1,7 @@
 # spring-security-token-authentication Application
 
 
-**Project Desctiption**
+## Project Desctiption
 
 This project is built on Spring security framework. It uses the custom implementation of spring security filter for handling the Authentication and Authorization process of users login based on generated token by the server.
 
@@ -9,7 +9,7 @@ When User login for the first time and provided credential is valid then user wi
 
 
 
-**Token Invalidation Process**
+**Token Invalidation Process
 
 Following are the cases when user already generated token will be invalidated even though it have not been expired.
 
