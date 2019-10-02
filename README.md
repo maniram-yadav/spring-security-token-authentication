@@ -9,7 +9,7 @@ When User login for the first time and provided credential is valid then user wi
 
 
 
-**Token Invalidation Process
+## Token Invalidation Process
 
 Following are the cases when user already generated token will be invalidated even though it have not been expired.
 
