@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -45,6 +46,7 @@ public class TokenAuthenticatorApplication implements CommandLineRunner {
 		SpringApplication.run(TokenAuthenticatorApplication.class, args);
 	}
 	
+	@PreAuthorize("hasRole('ROLE_ADMIN')")
 	@RequestMapping(path="/invalidatealltoken",method=RequestMethod.GET)
 	public String invalidateAllToken(){
 		List<String> allTokens=userCrudRepository.getAllTokens();

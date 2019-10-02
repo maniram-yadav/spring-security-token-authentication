@@ -22,9 +22,6 @@ import com.authenticator.service.UserCrudRepository;
 @RestController
 @RequestMapping("/user")
 public class UserController {
-
-	@Autowired
-	private Environment environment;
 	
 	@Autowired
 	private UserCrudRepository userCrudRepository;
